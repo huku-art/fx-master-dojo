@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FX投資スクール・自動売買ツール徹底比較 | FXマスター道場</title>
+    <meta name="description" content="FX投資スクール・自動売買ツールの徹底比較サイト。初心者から上級者まで、あなたに最適なFX教育・ツールを見つけられます。口コミ・評判・料金を詳しく解説。">
+    <meta name="keywords" content="FX,投資スクール,自動売買,EA,FX教材,為替,トレード,比較,おすすめ,口コミ">
+    <meta name="author" content="FXマスター道場編集部">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="FX投資スクール・自動売買ツール徹底比較 | FXマスター道場">
+    <meta property="og:description" content="FX投資スクール・自動売買ツールの徹底比較サイト。初心者から上級者まで、あなたに最適なFX教育・ツールを見つけられます。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fx-master-dojo.com">
+    
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "FXマスター道場",
+        "description": "FX投資スクール・自動売買ツールの徹底比較サイト",
+        "url": "https://fx-master-dojo.com"
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ヘッダー */
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        
+        nav a:hover {
+            opacity: 0.8;
+        }
+        
+        /* メインビジュアル */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(255,107,107,0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255,107,107,0.4);
+        }
+        
+        /* パンくず */
+        .breadcrumb {
+            background: white;
+            padding: 1rem 0;
+            font-size: 0.9rem;
+        }
+        
+        .breadcrumb a {
+            color: #666;
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            color: #2a5298;
+        }
+        
+        /* メインコンテンツ */
+        main {
+            padding: 3rem 0;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .main-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        
+        .sidebar {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            height: fit-content;
+        }
+        
+        h2, h3 {
+            color: #1e3c72;
+            margin-bottom: 1.5rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            border-bottom: 3px solid #2a5298;
+            padding-bottom: 0.5rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+        }
+        
+        /* ランキング */
+        .ranking {
+            margin-bottom: 3rem;
+        }
+        
+        .rank-item {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+            transition: all 0.3s;
+        }
+        
+        .rank-item:hover {
+            border-color: #2a5298;
+            box-shadow: 0 5px 20px rgba(42,82,152,0.1);
+        }
+        
+        .rank-number {
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background: #ff6b6b;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .rank-item h4 {
+            color: #1e3c72;
+            font-size: 1.3rem;
+            margin: 0 0 1rem 30px;
+        }
+        
+        .rank-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .feature-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature-value {
+            font-weight: bold;
+            color: #2a5298;
+            font-size: 1.1rem;
+        }
+        
+        .affiliate-button {
+            display: block;
+            background: #28a745;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+        
+        .affiliate-button:hover {
+            background: #218838;
+        }
+        
+        /* 比較表 */
+        .comparison-table {
+            overflow-x: auto;
+            margin: 2rem 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        th {
+            background: #2a5298;
+            color: white;
+            font-weight: bold;
+        }
+        
+        tr:hover {
+            background: #f8f9fa;
+        }
+        
+        /* サイドバー */
+        .sidebar-section {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .sidebar-section:last-child {
+            border-bottom: none;
+        }
+        
+        .news-item {
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        
+        .news-date {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+        
+        .news-title {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .news-title a {
+            color: #333;
+            text-decoration: none;
+        }
+        
+        .news-title a:hover {
+            color: #2a5298;
+        }
+        
+        /* フッター */
+        footer {
+            background: #1e3c72;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section ul li a:hover {
+            color: white;
+        }
+        
+        .disclaimer {
+            background: #1a2d5a;
+            padding: 2rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #ccc;
+        }
+        
+        /* レスポンシブ */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .rank-features {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* アニメーション */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .rank-item {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>FXマスター道場</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">ホーム</a></li>
+                        <li><a href="#schools">FXスクール</a></li>
+                        <li><a href="#tools">自動売買ツール</a></li>
+                        <li><a href="#reviews">口コミ・評判</a></li>
+                        <li><a href="#beginner">初心者ガイド</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>FXで勝つための最短ルートを見つけよう</h2>
+            <p>厳選されたFXスクール・自動売買ツールを徹底比較。あなたのトレードスタイルに最適な選択をサポートします。</p>
+            <a href="#ranking" class="cta-button">今すぐ比較を見る</a>
+        </div>
+    </section>
+
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="/">ホーム</a> &gt; FXスクール・自動売買ツール比較
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="content-grid">
+                <article class="main-content">
+                    <section id="ranking" class="ranking">
+                        <h2>🏆 FXスクール・教材 おすすめランキング</h2>
+                        
+                        <div class="rank-item">
+                            <div class="rank-number">1</div>
+                            <h4>FXアカデミア プロトレーダー養成コース</h4>
+                            <p>現役プロトレーダーが直接指導する本格的なFXスクール。月利10%以上を目指す実践的カリキュラムが特徴。</p>
+                            <div class="rank-features">
+                                <div class="feature">
+                                    <div class="feature-label">受講料金</div>
+                                    <div class="feature-value">398,000円</div>
+                                </div>
+                                <div class="feature">
+                                    <div class="feature-label">受講期間</div>
+                                    <div class="feature-value">6ヶ月</div>
+                                </div>
+                                <div class="feature">
+                                    <div class="feature-label">サポート</div>
+                                    <div class="feature-value">24時間対応</div>
+                                </div>
+                                <div class="feature">
+                                    <div class="feature-label">実績</div>
+                                    <div class="feature-value">勝率85%</div>
+                                </div>
+                            </div>
+                            <a href="#" class="affiliate-button">📊 無料体験セミナーに参加する</a>
+                        </div>
+
+                        <div class="rank-item">
+                            <div class="rank-number">2</div>
+                            <h4>トレードマスタリー FX完全攻略講座</h4>
+                            <p>初心者から上級者まで対応の総合FX講座。基礎から応用まで体系的に学べる充実したカリキュラム。</p>
+                            <div class="rank-features">
+                                <div class="feature">
+                                    <div class="feature-label">受講料金</div>
+                                    <div class="feature-value">298,000円</div>
+                                </div>
+                                <div class="feature">
+                                    <div class="feature-label">受講期間</div>
+                                    <div class="feature-value">4ヶ月</div>
+                                </div>
+                                <div class="feature">
+                                    <div class="feature-label">サポート</div>
+                                    <div class="feature-value">平日対応</div>
+                                </div>
+                                <div class="feature">
+                                    <div class="feature-label">満足度</div>
+                                    <div class="feature-value">92%</div>
+                                </div>
+                            </div>
+                            <a href="#" class="affiliate-button">📈 詳細をチェックする</a>
+                        </div>
+
+                        <div class="rank-item">
+                            <div class="rank-number">3</div>
+                            <h4>FXリッチクラブ オンラインスクール</h4>
+                            <p>月額制でリーズナブルにFXを学習できるオンラインスクール。豊富な動画コンテンツと実践的な課題が魅力。</p>
+                            <div class="rank-features">
+                                <div class="feature">
+                                    <div class="feature-label">月額料金</div>
+                                    <div class="feature-value">29,800円</div>
+                                </div>
+                                <div class="feature">
+                                    <div class="feature-label">コンテンツ数</div>
+                                    <div class="feature-value">200本以上</div>
+                                </div>
+                                <div class="feature">
+                                    <div class="feature-label">更新頻度</div>
+                                    <div class="feature-value">週3回</div>
+                                </div>
+                                <div class="feature">
+                                    <div class="feature-label">会員数</div>
+                                    <div class="feature-value">5,000人</div>
+                                </div>
+                            </div>
+                            <a href="#" class="affiliate-button">💰 14日間無料で試してみる</a>
+                        </div>
+                    </section>
+
+                    <section id="auto-trading" class="ranking">
+                        <h2>🤖 自動売買ツール おすすめランキング</h2>
+                        
+                        <div class="rank-item">
+                            <div class="rank-number">1</div>
+                            <h4>FXオートプロ 究極EA</h4>
+                            <p>10年間の相場データを分析して開発された最新AI搭載の自動売買ツール。安定した収益性が魅力。</p>
+                            <div class="rank-features">
+                                <div class="feature">
+                                    <div class="feature-label">価格</div>
+                                    <div class="feature-value">198,000円</div>
+                                </div>
+                                <div class="feature">
+                                    <div class="feature-label">月利実績</div>
+                                    <div class="feature-value">平均15%</div>
+                                </div>
+                                <div class="feature">
+                                    <div class="feature-label">対応通貨ペア</div>
+                                    <div class="feature-value">8ペア</div>
+                                </div>
+                                <div class="feature">
+                                    <div class="feature-label">最大ドローダウン</div>
+                                    <div class="feature-value">8%</div>
+                                </div>
+                            </div>
+                            <a href="#" class="affiliate-button">⚡ 今すぐダウンロードする</a>
+                        </div>
+
+                        <div class="rank-item">
+                            <div class="rank-number">2</div>
+                            <h4>スマートトレーダーEA</h4>
+                            <p>シンプルな設定で初心者でも簡単に運用できる自動売買システム。リスク管理機能も充実。</p>
+                            <div class="rank-features">
+                                <div class="feature">
+                                    <div class="feature-label">価格</div>
+                                    <div class="feature-value">98,000円</div>
+                                </div>
+                                <div class="feature">
+                                    <div class="feature-label">勝率</div>
+                                    <div class="feature-value">78%</div>
+                                </div>
+                                <div class="feature">
+                                    <div class="feature-label">推奨資金</div>
+                                    <div class="feature-value">30万円</div>
+                                </div>
+                                <div class="feature">
+                                    <div class="feature-label">サポート期間</div>
+                                    <div class="feature-value">1年間</div>
+                                </div>
+                            </div>
+                            <a href="#" class="affiliate-button">🎯 詳細を確認する</a>
+                        </div>
+                    </section>
+
+                    <section class="comparison-table">
+                        <h2>📊 FXスクール詳細比較表</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>スクール名</th>
+                                    <th>料金</th>
+                                    <th>期間</th>
+                                    <th>サポート</th>
+                                    <th>返金保証</th>
+                                    <th>評価</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>FXアカデミア</td>
+                                    <td>398,000円</td>
+                                    <td>6ヶ月</td>
+                                    <td>24時間</td>
+                                    <td>30日間</td>
+                                    <td>★★★★★</td>
+                                </tr>
+                                <tr>
+                                    <td>トレードマスタリー</td>
+                                    <td>298,000円</td>
+                                    <td>4ヶ月</td>
+                                    <td>平日のみ</td>
+                                    <td>14日間</td>
+                                    <td>★★★★☆</td>
+                                </tr>
+                                <tr>
+                                    <td>FXリッチクラブ</td>
+                                    <td>29,800円/月</td>
+                                    <td>制限なし</td>
+                                    <td>コミュニティ</td>
+                                    <td>なし</td>
+                                    <td>★★★☆☆</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <section>
+                        <h2>💡 FXスクール選びの重要ポイント</h2>
+                        <h3>1. 講師の実績と経験</h3>
+                        <p>FXスクールを選ぶ際に最も重要なのは、講師の実績です。実際にトレードで成功している講師から学ぶことで、リアルな相場感覚や実践的な手法を身につけることができます。</p>
+                        
+                        <h3>2. カリキュラムの充実度</h3>
+                        <p>基礎から応用まで体系的に学べるカリキュラムが整っているかが重要です。テクニカル分析、ファンダメンタル分析、リスク管理など、トレードに必要な知識を網羅的に学習できるスクールを選びましょう。</p>
+                        
+                        <h3>3. サポート体制</h3>
+                        <p>学習中の疑問や悩みに対するサポート体制も重要な判断基準です。24時間対応のサポートがあると、相場の動きに合わせていつでも質問できるため安心です。</p>
+                        
+                        <h3>4. 実践的な内容</h3>
+                        <p>理論だけでなく、実際のトレード環境での練習や、リアルタイムでの相場分析など、実践的な内容が含まれているスクールがおすすめです。</p>
+                    </section>
+                </article>
+
+                <aside class="sidebar">
+                    <div class="sidebar-section">
+                        <h3>🔥 人気記事ランキング</h3>
+                        <div class="news-item">
+                            <div class="news-date">2025.08.10</div>
+                            <div class="news-title">
+                                <a href="#">FX初心者が最初に覚えるべき3つの基本手法</a>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <div class="news-date">2025.08.08</div>
+                            <div class="news-title">
+                                <a href="#">自動売買EAの選び方完全ガイド</a>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <div class="news-date">2025.08.05</div>
+                            <div class="news-title">
+                                <a href="#">月利20%を達成したトレーダーの秘訣</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>📈 おすすめFX口座</h3>
+                        <div style="background: #f8f9fa; padding: 1rem; border-radius: 5px; margin-bottom: 1rem;">
+                            <h4 style="margin-bottom: 0.5rem; color: #1e3c72;">XMTrading</h4>
+                            <p style="font-size: 0.9rem; margin-bottom: 1rem;">最大レバレッジ1000倍、豊富なボーナス</p>
+                            <a href="#" class="affiliate-button" style="margin: 0;">口座開設はこちら</a>
+                        </div>
+                        <div style="background: #f8f9fa; padding: 1rem; border-radius: 5px;">
+                            <h4 style="margin-bottom: 0.5rem; color: #1e3c72;">GEMFOREX</h4>
+                            <p style="font-size: 0.9rem; margin-bottom: 1rem;">EA使い放題、入金ボーナス充実</p>
+                            <a href="#" class="affiliate-button" style="margin: 0;">口座開設はこちら</a>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>⚠️ リスク警告</h3>
+                        <div style="background: #fff3cd; border: 1px solid #ffeaa7; padding: 1rem; border-radius: 5px; font-size: 0.9rem;">
+                            <p>FX取引は高いリスクを伴います。投資元本を失う可能性があることを十分理解した上で取引を行ってください。</p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>FXマスター道場について</h4>
+                    <ul>
+                        <li><a href="#">サイトについて</a></li>
+                        <li><a href="#">運営者情報</a></li>
+                        <li><a href="#">お問い合わせ</a></li>
+                        <li><a href="#">プライバシーポリシー</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>FXスクール</h4>
+                    <ul>
+                        <li><a href="#">初心者向けスクール</a></li>
+                        <li><a href="#">上級者向けスクール</a></li>
+                        <li><a href="#">オンライン講座</a></li>
+                        <li><a href="#">個別指導</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>自動売買ツール</h4>
+                    <ul>
+                        <li><a href="#">EA比較</a></li>
+                        <li><a href="#">MT4対応ツール</a></li>
+                        <li><a href="#">MT5対応ツール</a></li>
+                        <li><a href="#">設定方法</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>学習コンテンツ</h4>
+                    <ul>
+                        <li><a href="#">FX基礎知識</a></li>
+                        <li><a href="#">テクニカル分析</a></li>
+                        <li><a href="#">ファンダメンタル分析</a></li>
+                        <li><a href="#">リスク管理</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="disclaimer">
+            <div class="container">
+                <p><strong>免責事項・リスク警告</strong></p>
+                <p>当サイトで紹介するFXスクール・自動売買ツールの情報は、投資判断の参考として提供するものであり、投資の勧誘や特定の投資行動を推奨するものではありません。FX取引は元本保証がなく、相場の変動により損失が生じる可能性があります。投資に関する最終決定は、必ずご自身の判断と責任において行ってください。</p>
+                <p>また、当サイトに掲載されている情報の正確性については万全を期しておりますが、その内容を保証するものではありません。当サイトの情報を利用することによって生じたいかなる損害についても、当サイトは一切の責任を負いません。</p>
+                <p>FX取引を始める前に、必ず各FX会社の契約締結前交付書面等をよくお読みいただき、取引内容やリスクを十分にご理解の上、ご自身の判断でお取引ください。</p>
+                <p style="margin-top: 1rem; font-size: 0.8rem; color: #999;">
+                    &copy; 2025 FXマスター道場. All rights reserved. | 
+                    <a href="#" style="color: #999;">利用規約</a> | 
+                    <a href="#" style="color: #999;">特定商取引法に基づく表記</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // スムーススクロール
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // アフィリエイトボタンのクリック追跡（デモ用）
+        document.querySelectorAll('.affiliate-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // 実際のアフィリエイトリンクではGoogleアナリティクスなどで
+                // コンバージョン追跡を行います
+                console.log('アフィリエイトリンククリック:', this.textContent);
+                
+                // デモ用アラート
+                alert('実際のサイトでは、ここでアフィリエイトリンク先に遷移します。\n\nクリックされたボタン: ' + this.textContent);
+            });
+        });
+
+        // 簡単なページビュー追跡（デモ用）
+        function trackPageView() {
+            console.log('ページビュー追跡: FXマスター道場 - メインページ');
+            // 実際にはGoogleアナリティクスなどを使用
+        }
+
+        // ページ読み込み時に追跡
+        window.addEventListener('load', trackPageView);
+
+        // スクロール連動エフェクト
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.hero');
+            if (parallax) {
+                const speed = scrolled * 0.5;
+                parallax.style.transform = `translateY(${speed}px)`;
+            }
+        });
+
+        // 動的コンテンツ読み込み（デモ用）
+        function loadMoreContent() {
+            // 実際のサイトでは、ここでAjaxを使って
+            // 追加のスクール情報やツール情報を読み込みます
+            console.log('追加コンテンツの読み込み');
+        }
+
+        // フォーム送信処理（お問い合わせなど用）
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            console.log('フォーム送信処理');
+            // 実際のサイトでは、ここでメール送信やデータベース保存を行います
+        }
+
+        // ローカルストレージを使った訪問履歴（デモ用）
+        function trackVisit() {
+            // 注意: 実際のClaude.ai環境ではlocalStorageは使用できません
+            // 実際の実装時のみ使用してください
+            const visits = 1; // デモ用の固定値
+            console.log(`訪問回数: ${visits}回目`);
+        }
+
+        trackVisit();
+
+        // レスポンシブメニュー制御
+        function toggleMobileMenu() {
+            const nav = document.querySelector('nav ul');
+            nav.classList.toggle('mobile-open');
+        }
+
+        // モバイルメニューのCSS（メディアクエリ内に追加済み）
+    </script>
+
+    <!-- SEO用の追加構造化データ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "FXスクールランキング",
+        "description": "おすすめのFXスクール・教材ランキング",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                    "@type": "Course",
+                    "name": "FXアカデミア プロトレーダー養成コース",
+                    "description": "現役プロトレーダーが直接指導する本格的なFXスクール",
+                    "provider": {
+                        "@type": "Organization",
+                        "name": "FXアカデミア"
+                    },
+                    "offers": {
+                        "@type": "Offer",
+                        "price": "398000",
+                        "priceCurrency": "JPY"
+                    }
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                    "@type": "Course",
+                    "name": "トレードマスタリー FX完全攻略講座",
+                    "description": "初心者から上級者まで対応の総合FX講座",
+                    "provider": {
+                        "@type": "Organization",
+                        "name": "トレードマスタリー"
+                    },
+                    "offers": {
+                        "@type": "Offer",
+                        "price": "298000",
+                        "priceCurrency": "JPY"
+                    }
+                }
+            }
+        ]
+    }
+    </script>
+</body>
+</html>
